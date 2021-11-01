@@ -8,21 +8,8 @@
 </div>
 
 <div class="messages">
-  <div class = "message">
-    <div class = "upper-message">
-      <div class ="message-name">
-        rei
-      <div>
-      <div class = "time">
-        2021/10/28(Thu) 0:00:00
-      </div>
-    </div>
-    <div class = "lower-message">
-      <div class = "tweet">
-        おやすみ
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
+</div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
   <div class="form-input">
@@ -34,24 +21,6 @@
   </div>
   <%= f.submit '送信', class: 'form-submit' %>
 <% end %>
-
-
-  <div class = "message">
-    <div class = "upper-message">
-      <div class ="message-name">
-        ren
-      <div>
-      <div class = "time">
-        2021/10/28(Thu) 0:01:00
-      </div>
-    </div>
-    <div class = "lower-message">
-      <div class = "tweet">
-        oyasumi
-      </div>
-    </div>
-  </div>
-</div>
 
 <div class="form">
   <div class="form-input">
